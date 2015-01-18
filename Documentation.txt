@@ -29,10 +29,10 @@ ADD:    1   0   0   1   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
 SUB:    1   0   1   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
 SHR:    1   0   1   1   [ DESTINATION ] [   SOURCE   ] [INDEX ] [I] [P]
 ---:
-NOR:    1   0   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
-IOR:    1   0   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
-AND:    1   0   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
-XOR:    1   0   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+NOR:    1   1   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+IOR:    1   1   0   1   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+AND:    1   1   1   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+XOR:    1   1   1   1   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
 
 REGISTERS:
 0 -  POP - POP STACK
