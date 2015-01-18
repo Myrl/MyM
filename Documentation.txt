@@ -1,0 +1,59 @@
+0000 - MOV
+0001 - MOVi
+0010 - OUT
+0011 - IN
+0100 - CAL
+0101 - JGT
+0110 - JEQ
+0111 - JNE
+1000 - ADD
+1001 - SUB
+1010 - SHR
+1011 - ---
+1100 - NOR
+1101 - IOR
+1110 - AND
+1111 - XOR
+
+	b0  b1  b2  b3  b4  b5  b6  b7  b8  b9  b10 b11 b12 b13 b14 b15
+
+MOV:    0   0   0   0 	[ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+MOVi:   0   0   0   1   [ DESTINATION ] [    IMMEDIATE   VALUE    ] [P]
+OUT:	0   0   1   0   [       PORT     NUMBER       ] [   SOURCE    ]
+IN:     0   0   1   1   [       PORT     NUMBER       ] [ DESTINATION ]
+CAL:    0   1   0   0   [                   OFFSET                    ]
+JGT:    0   1   0   1   [                   OFFSET                    ]
+JEQ:    0   1   1   0   [                   OFFSET                    ]
+JNE:    0   1   1   1   [                   OFFSET                    ]
+ADD:    1   0   0   1   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+SUB:    1   0   1   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+SHR:    1   0   1   1   [ DESTINATION ] [   SOURCE   ] [INDEX ] [I] [P]
+---:
+NOR:    1   0   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+IOR:    1   0   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+AND:    1   0   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+XOR:    1   0   0   0   [ DESTINATION ] [   SOURCE   ] [  INDEX   ] [P]
+
+REGISTERS:
+0 -  POP - POP STACK
+1 -  TOS - TOP OF STACK
+2 -  IP
+3 -  SP
+4 -  BP
+5 -  I0
+6 -  P0
+7 -  P1
+8 -  R0
+9 -  R1
+10 - R2
+11 - R3
+12 - R4
+13 - R5
+14 - R6
+15 - R7
+
+INDEX:
+ALL 1s: use I0
+Otherwise: Literally
+k
+
