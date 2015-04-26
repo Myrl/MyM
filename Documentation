@@ -1,4 +1,4 @@
-        b0  b1  b2  b3  b4  b5  b6  b7  b8  b9  b10 b11 b12 b13 b14 b15
+        b15 b14 b13 b12 b11 b10 b9  b8  b7  b6  b5  b4  b3  b2  b1  b0
 
 NOT:    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0o000000
 FPU:    0   0   0   0   0   0   0   0   0   0   0   0   1   [ COMMAND ] 0o00001c
@@ -18,8 +18,17 @@ REGISTERS:
 R0  - Accumulator
 
 --Reserved Registers--
-R48-R60 --unused
-R61 - STACK - Push|Pop stack
-R62 - ToS - Top of Stack
-R63 - SP - Stack Pointer
-R64 - IP - Instruction Pointer
+R48 - IMM - Immediate Register
+R49 - WAD0 - Write Address 0
+R50 - WAD1 - Write Address 1
+R51 - RAD0 - Read Address 0
+R52 - RAD1 - Read Address 0
+R53 - W0 - [WAD0]
+R54 - W1 - [WAD1]
+R55 - R0 - [RAD0]
+R56 - R1 - [RAD1]
+R57-R59 --unused
+R60 - STACK - Push|Pop stack
+R61 - ToS - Top of Stack
+R62 - SP - Stack Pointer
+R63 - IP - Instruction Pointer
