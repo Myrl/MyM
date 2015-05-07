@@ -10,24 +10,32 @@ AND:    0   0   0   0   0   0   0   1   0   1   [       SOURCE        ] 0o0005ss
 EOR:    0   0   0   0   0   0   0   1   1   0   [       SOURCE        ] 0o0006ss
 XOR:    0   0   0   0   0   0   0   1   1   1   [       SOURCE        ] 0o0007ss
 LODi:   0   0   0   0   0   0   1   [  SIGN EXTENDED IMMEDIATE VALUE  ] 0o001iii
+SFT:    0   0   0   0   0   1   0   [  FLAGS   ][       SOURCE        ] 0o002fss
 CALL:   0   0   0   1   [           TWO'S COMPLEMENT OFFSET           ] 0o01aaaa
 Jn:     0   0   1   0   [           TWO'S COMPLEMENT OFFSET           ] 0o02aaaa
 Jz:     0   0   1   1   [           TWO'S COMPLEMENT OFFSET           ] 0o03aaaa
 
+SFT:
+f2 =  immediate | !register
+f1 = sign extend
+f0 = left shift | right shift + 1
+
 REGISTERS:
-R0  - Accumulator
+R0 - R31 - General Purpose Registers
 
 --Reserved Registers--
-R48 - IMM - Immediate Register
-R49 - WAD0 - Write Address 0
-R50 - WAD1 - Write Address 1
-R51 - RAD0 - Read Address 0
-R52 - RAD1 - Read Address 0
-R53 - W0 - [WAD0]
-R54 - W1 - [WAD1]
-R55 - R0 - [RAD0]
-R56 - R1 - [RAD1]
-R57-R59 --unused
+R32 - ACC - Accumulator
+R33 - IMM - Immediate Register
+R34 - WAD0 - Write Address 0
+R35 - WAD1 - Write Address 1
+R36 - RAD0 - Read Address 0
+R37 - RAD1 - Read Address 0
+R38-R47 --unused
+R48 - W0 - [WAD0]
+R49 - W1 - [WAD1]
+R50 - R0 - [RAD0]
+R51 - R1 - [RAD1]
+R52-R59 --unused
 R60 - STACK - Push|Pop stack
 R61 - ToS - Top of Stack
 R62 - SP - Stack Pointer
